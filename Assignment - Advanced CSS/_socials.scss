@@ -1,0 +1,56 @@
+// SCSS file for social media container design
+.social-media-container {
+  position: sticky;
+  width: 50px;
+  bottom: 70%;
+
+  .social-media {
+    list-style-type: none;
+
+    .external-link {
+      color: white;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    .blog {
+      @include socialbuttons($blogbg);
+
+      .fa-laptop-code::before {
+        @include icons($blogicon);
+      }
+    }
+
+    .facebook {
+      @include socialbuttons($facebookbg);
+
+      .fa-facebook::before {
+        @include icons($facebookicon);
+      }
+    }
+
+    .twitter {
+      @include socialbuttons($twitterbg);
+
+      .fa-twitter::before {
+        @include icons($twittericon);
+      }
+    }
+
+    .linkedin {
+      @include socialbuttons($linkedinbg);
+
+      .fa-linkedin-in::before {
+        @include icons($linkedinicon);
+      }
+    }
+
+    .github {
+      @include socialbuttons($githubbg);
+
+      .fa-github::before {
+        @include icons($githubicon);
+      }
+    }
+  }
+}

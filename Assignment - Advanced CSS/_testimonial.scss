@@ -1,0 +1,82 @@
+/* Testimonial CSS styling */
+.testimonial {
+  position: relative;
+  width: 320px;
+  height: max-content;
+  box-shadow: 0px 5px 10px gray;
+  border-radius: 20px;
+  background: #fff;
+
+  /* Container for testimonial text */
+  .testimonial-quote-container {
+    padding: 30px 30px 0 30px;
+    border-radius: 20px 20px 0 0;
+
+    p {
+      color: #555;
+      font-size: 1.05em;
+      font-weight: bold;
+      line-height: 1.45em;
+      margin-bottom: -50px;
+    }
+  }
+
+  .testimonial-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+    border-radius: 100%;
+    border: 5px solid #fff;
+    transform: translateY(60px);
+  }
+
+  /* Container for source & name */
+  .testimonial-source-container {
+    padding: 70px 50px 30px 50px;
+    background: #686de0;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 1rem;
+
+    h3 {
+      color: white;
+    }
+    p {
+      color: lightsteelblue;
+    }
+  }
+
+  .button-more {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    transition: background-color 400ms ease-out;
+  }
+
+  /* If hovering over portfolio item class, content will appear over image */
+  &:hover {
+    .button-more {
+      visibility: visible;
+      position: absolute;
+      display: flex;
+      top: 0;
+      left: 0;
+      border-radius: 20px;
+      width: 100%;
+      height: 100%;
+      background: rgb(50, 50, 50);
+      align-items: center;
+      justify-content: center;
+
+      button {
+        width: 120px;
+        height: 50px;
+        font-size: 1em;
+        border-style: none;
+        border-radius: 10px;
+      }
+    }
+  }
+}

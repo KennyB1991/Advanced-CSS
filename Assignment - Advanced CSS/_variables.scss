@@ -1,0 +1,56 @@
+// SCSS file for mixins and variables
+
+$blogbg: #e17b77; // Variable for blog-button background color
+$facebookbg: #3b5998; // Variable for facebook-button background color
+$twitterbg: #00aced; // Variable for twitter-button background color
+$linkedinbg: #007bb6; // Variable for linkedin-button background color
+$githubbg: #333; // Variable for github-button background color
+
+$blogicon: "\f5fc"; // Variable for blog-button icon code
+$facebookicon: "\f09a"; // Variable for facebook-button icon code
+$twittericon: "\f099"; // Variable for twitter-button icon code
+$linkedinicon: "\f0e1"; // Variable for linkedin-button icon code
+$githubicon: "\f09b"; // Variable for github-button icon code
+
+$columnwidth: 320px; // Width of grid columns
+
+/* Mixin of general behaviour and design for social buttons */
+@mixin socialbuttons($bgcolor) {
+  width: 250px;
+  height: 50px;
+  text-align: right;
+  padding: 12px 0px 0px 0px;
+  background: $bgcolor;
+  transform: translateX(-200px);
+  transition: transform 500ms ease-in;
+
+  &:hover {
+    transition: transform 500ms ease-out;
+    transform: translateX(0);
+  }
+}
+
+/* Mixin for social media icon design */
+@mixin icons($iconcode) {
+  margin: 0px 15px 0px 20px;
+  content: $iconcode;
+  font-size: 1.3em;
+  color: white;
+}
+
+/* Mixin portfolio container setup */
+@mixin portfoliosetup {
+  display: block;
+  width: max-content;
+  height: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+}
+
+/* Mixin grid setup */
+@mixin gridsetup($columns) {
+  display: grid;
+  grid-template-columns: repeat($columns, $columnwidth);
+  gap: 15px;
+}
